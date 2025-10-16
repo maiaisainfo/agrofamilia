@@ -36,7 +36,7 @@ while escolha != '0':
 
         op= None
         while op != '0':
-            print('.......MENU INTERNO.......')
+            print('.......MENU INTERNO.........')
             print('1-Inserir produto\n2-Remover produto\n3-Mostrar lista de produtos cadastrados\n0-sair')
             op = input('Digite a opção escolhida: ')
 
