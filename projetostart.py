@@ -31,12 +31,12 @@ while escolha != '0':
                 log_ok= True
                 break
             else:
-                print('Acesso negado - OK. Cadastre-se em nosso sistema ou insira seus dados corretamente.')
+                print('Acesso negado.Cadastre-se em nosso sistema ou insira seus dados corretamente.')
 
 
         op= None
         while op != '0':
-            print('.......MENU INTERNO.........')
+            print('.......MENU INTERNO.......')
             print('1-Inserir produto\n2-Remover produto\n3-Mostrar lista de produtos cadastrados\n0-sair')
             op = input('Digite a opção escolhida: ')
 
