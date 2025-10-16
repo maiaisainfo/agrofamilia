@@ -31,7 +31,7 @@ while escolha != '0':
                 log_ok= True
                 break
             else:
-                print('Acesso negado. Cadastre-se em nosso sistema ou insira seus dados corretamente.')
+                print('Acesso negado - OK. Cadastre-se em nosso sistema ou insira seus dados corretamente.')
 
 
         op= None
