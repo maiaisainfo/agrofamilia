@@ -1,6 +1,6 @@
 usuarios = [ ]
 produtos= [ ]
-escolha = '167'
+escolha = None
 
 while escolha != '0':
     print ('Bem-Vindo ao Fazenda Agro!')
@@ -10,7 +10,7 @@ while escolha != '0':
 
     if escolha == '1':
         nome =input ('Digite seu nome: ')
-        cpf = input ('Digit seu CPF: ')
+        cpf = input ('Digite seu CPF: ')
         senha = input ('Crie uma senha: ').lower()
         confirm_senha = input ('Confirme sua senha:') .lower()
 
@@ -44,7 +44,7 @@ while escolha != '0':
                 prod= input('Digite o nome do produto: ')
                 quant = input('Digite a quantidade disponível do produto: ')
                 valor = input('Digite o valor do produto: ')
-                produtos.append ([prod, quant, valor, usuarios[0][1]])
+                produtos.append ([prod,quant,valor, usuarios[0][1]])
 
             elif op== '3':
                 print (produtos)
@@ -54,6 +54,9 @@ while escolha != '0':
                     print (itens, 'Nome do produto:', produtos [itens][0])
                 indice= int (input ('Digite o índice do produto escolhido: '))
                 produtos.pop (indice)
+
+
+
 
 
 
