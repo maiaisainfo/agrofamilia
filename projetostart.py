@@ -37,7 +37,7 @@ while escolha != '0':
         op= None
         while op != '0':
             print('.......MENU INTERNO.......')
-            print('1-Inserir produto\n2-Remover produto\n3-Mostrar lista de produtos cadastrados\n0-sair')
+            print('1-Inserir produto\n2-Remover produto\n3-Mostrar lista de produtos cadastrados\n4- Editar produtos cadastrados\n0-sair')
             op = input('Digite a opção escolhida: ')
 
             if op =='1':
@@ -47,27 +47,13 @@ while escolha != '0':
                 produtos.append ([prod,quant,valor, usuarios[0][1]])
 
             elif op== '3':
-                print (produtos)
+                for pro in produtos:
+                    if cpf == produtos [3]:
+                        print (produtos)
 
             elif op=='2':
                 for itens in range (len (produtos)):
                     print (itens, 'Nome do produto:', produtos [itens][0])
                 indice= int (input ('Digite o índice do produto escolhido: '))
                 produtos.pop (indice)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
