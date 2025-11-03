@@ -1,6 +1,6 @@
 usuarios = [ ]
 produtos= [ ]
-escolha = None
+escolha = 43455653
 
 while escolha != '0':
     print ('Bem-Vindo ao Fazenda Agro!')
@@ -34,26 +34,64 @@ while escolha != '0':
                 print('Acesso negado.Cadastre-se em nosso sistema ou insira seus dados corretamente.')
 
 
-        op= None
-        while op != '0':
-            print('.......MENU INTERNO.......')
-            print('1-Inserir produto\n2-Remover produto\n3-Mostrar lista de produtos cadastrados\n4- Editar produtos cadastrados\n0-sair')
-            op = input('Digite a opção escolhida: ')
+        op = 353434
+        if log_ok:
 
-            if op =='1':
-                prod= input('Digite o nome do produto: ')
-                quant = input('Digite a quantidade disponível do produto: ')
-                valor = input('Digite o valor do produto: ')
-                produtos.append ([prod,quant,valor, usuarios[0][1]])
+             while op != '0':
+                print('.......MENU INTERNO.......')
+                print('1-Inserir produto\n2-Remover produto\n3-Mostrar lista de produtos cadastrados\n4- Editar produtos cadastrados\n0-sair')
+                op = input('Digite a opção escolhida: ')
 
-            elif op== '3':
-                for pro in produtos:
-                    if cpf == produtos [3]:
-                        print (produtos)
+                if op =='1':
+                    prod= input('Digite o nome do produto: ')
+                    quant = input('Digite a quantidade disponível do produto: ')
+                    valor = input('Digite o valor do produto: ')
+                    produtos.append ([prod,quant,valor, usuarios[0][1]])
 
-            elif op=='2':
-                for itens in range (len (produtos)):
-                    print (itens, 'Nome do produto:', produtos [itens][0])
-                indice= int (input ('Digite o índice do produto escolhido: '))
-                produtos.pop (indice)
+                elif op== '3':
+                    for pro in produtos:
+                        if cpf == pro [3]:
+                            print (produtos)
+
+                elif op=='2':
+                    for itens in range (len (produtos)):
+                        print (itens, 'Nome do produto:', produtos [itens][0])
+                    indice= int (input ('Digite o índice do produto escolhido: '))
+                    produtos.pop (indice)
+
+                elif op== '4':
+
+
+                    for g in produtos:
+                        if usuarios[0][1] in produtos:
+                            print (g, 'Nome do produto:', produtos [g][0])
+                            nome_alterar = input('Digite o nome do produto que deseja alterar: ')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
