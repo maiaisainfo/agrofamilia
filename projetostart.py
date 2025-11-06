@@ -1,3 +1,9 @@
+def verificar_senha(s, c):
+    if s != c:
+        return True
+    else:
+        return False
+
 usuarios = [ ]
 produtos= [ ]
 escolha = 43455653
@@ -9,18 +15,21 @@ while escolha != '0':
     escolha = input('Digite a opção escolhida: ')
 
     if escolha == '1':
+        cpf = input('Digite seu CPF: ')
         nome =input ('Digite seu nome: ')
-        cpf = input ('Digite seu CPF: ')
-        senha = input ('Crie uma senha: ').lower()
-        confirm_senha = input ('Confirme sua senha:') .lower()
+        senha= input ('Digite a senha: ')
+        confirmacao = input('Digite a confirmacao da senha: ')
+        while verificar_senha (senha, confirmacao):
+            senha = input('Digite a senha: ')
+            confirmacao = input('Digite a confirmacao da senha: ')
+        print ('Deu certo!')
 
-        while confirm_senha != senha :
-            confirm_senha = input('As senhas estão diferentes. Digite novamente: ').lower()
-        usuarios.append([nome,cpf, senha])
-        print ('Cadastro concluído com sucesso!')
+
 
     elif escolha == '4':
         print(usuarios)
+        if len(usuarios) == 0:
+            print('Nenhum usuário cadastrado ainda.')
 
     elif escolha == '2':
         cpf = input('Digite seu CPF: ')
@@ -30,8 +39,7 @@ while escolha != '0':
             if cpf== usu [1] and senha == usu [2]:
                 log_ok= True
                 break
-            else:
-                print('Acesso negado.Cadastre-se em nosso sistema ou insira seus dados corretamente.')
+
 
 
         op = 353434
@@ -60,12 +68,24 @@ while escolha != '0':
                     produtos.pop (indice)
 
                 elif op== '4':
+                        for p in range (len(produtos)):
+                            print(p, 'Nome do produto:', produtos[p][0])
+                        indice = int(input('Digite o índice do produto escolhido: '))
+                        produtos[indice][0] = input('Digite o nome do produto: ')
+                        produtos[indice][1] = input('Digite a quantidade do produto: ')
+                        produtos[indice][2] = input('Digite o valor do produto: ')
+
+                elif op== '0':
+                    print ('Saindo do menu interno...')
+
+             else:
+                 print('Acesso negado.Cadastre-se em nosso sistema ou insira seus dados corretamente.')
 
 
-                    for g in produtos:
-                        if usuarios[0][1] in produtos:
-                            print (g, 'Nome do produto:', produtos [g][0])
-                            nome_alterar = input('Digite o nome do produto que deseja alterar: ')
+
+
+
+
 
 
 
